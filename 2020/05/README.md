@@ -1,4 +1,4 @@
-# Day 4: Binary Boarding
+# Day 5: Binary Boarding
 
 Copyright (c) Eric Wastl
 #### [Direct Link](https://adventofcode.com/2020/day/5)
@@ -35,7 +35,7 @@ For example, consider just the last 3 characters of `FBFBBFFRLR`:
 
 So, decoding `FBFBBFFRLR` reveals that it is the seat at **row `44`, column `5`.**
 
-Every seat also has a unique **seat ID:** multiply the row by 8, then add the column. In this example, the seat has ID `44 * 8 + 5 =` **`357`**.
+Every seat also has a unique **seat ID:** multiply the row by 8, then add the column. In this example, the seat has ID `44 * 8 + 5 = 357`.
 
 Here are some other boarding passes:
 
