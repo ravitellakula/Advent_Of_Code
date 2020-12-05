@@ -1,4 +1,4 @@
-# Day 3: Toboggan Trajectory
+# Day 4: Passport Processing
 
 Copyright (c) Eric Wastl
 #### [Direct Link](https://adventofcode.com/2020/day/4)
