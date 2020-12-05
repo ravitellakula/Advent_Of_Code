@@ -3,8 +3,6 @@ class Day4:
 
   @staticmethod
   def readFile(fileName):
-    inputList: list = []
-    tempTxt = ''
     with open(f"{__file__.rstrip('code.py')}{fileName}", "r") as f:
       return f.read().splitlines()
 
@@ -12,11 +10,23 @@ class Day4:
   def convertStringToDict(inputString):
     return (dict((key.strip(), value.strip()) for key, value in (element.split(':') for element in inputString.split(' '))) if inputString and inputString.strip() else "")
 
-
   @staticmethod
   def checkIfAllFieldsPresent(inputDict) :
     passportfields = set(["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"])
     return (all(key in inputDict for key in (passportfields)))
+
+  @staticmethod
+  def checkIfAllFieldsPresentAndValidWithPatterns(inputDict):
+    fieldValidationPatterns = {
+      "byr" :"19[2-9][0-9]|200[0-2]",
+      "iyr": "20(1[0-9]|20)",
+      "eyr": "20(2[0-9]|30)",
+      "hgt": "(1([5-8][0-9]|9[0-3])cm)|((59|6[0-9]|7[0-6])in)",
+      "hcl": "#[0-9a-f]{6}",
+      "ecl": "amb|blu|brn|gry|grn|hzl|oth",
+      "pid": "[0-9]{9}"
+    }
+    return (all(re.fullmatch(fieldValidationPatterns[key], inputDict[key] if key in inputDict else '') for key in (fieldValidationPatterns)))
 
   @staticmethod
   def checkIfAllFieldsPresentAndValid(inputDict):
@@ -31,7 +41,7 @@ class Day4:
                 or (inputDict["hgt"][len(inputDict["hgt"]) - 2:] == "in") and (59 <= int(inputDict["hgt"][: len(inputDict["hgt"]) - 2]) <= 76)) :
                 if re.match("^#[0-9a-f]{6}$", inputDict["hcl"]):
                   if inputDict["ecl"] in validecls :
-                    if re.match("^[0-9a]{9}$", inputDict["pid"]):
+                    if re.match("^[0-9]{9}$", inputDict["pid"]):
                       validPassport = True
     return validPassport
 
