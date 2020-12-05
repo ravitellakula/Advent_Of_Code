@@ -10,7 +10,7 @@ class Day2:
   @staticmethod
   def readFile():
     with open(f"{__file__.rstrip('code.py')}input.txt", "r") as f:
-        return [(line[:-1]) for line in f.readlines()]
+        return f.read().splitlines()
 
   @staticmethod
   def validPasswordCount(inputvalues: list):
