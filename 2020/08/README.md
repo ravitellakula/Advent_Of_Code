@@ -1,4 +1,4 @@
-# Day 7: Handheld Halting
+# Day 8: Handheld Halting
 
 Copyright (c) Eric Wastl
 #### [Direct Link](https://adventofcode.com/2020/day/8)
