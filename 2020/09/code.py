@@ -28,7 +28,7 @@ def main() :
   inputList = readInputFile('input.txt')
   num = findStandoutNumber(inputList, 25)[0]
   print ("First Number in the list that is not the sum of two of the 25 numbers before - ", num)
-  print ("Sum of Min & Max of the consecutive range - ", findSumofMinMaxRange(inputList, num))
+  print ("Encryption Weakness - ", findSumofMinMaxRange(inputList, num))
 
 if __name__ == '__main__' :
   test_start_time = time.time()
