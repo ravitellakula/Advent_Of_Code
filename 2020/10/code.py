@@ -36,9 +36,11 @@ def getVolts(inputList) :
 
 def test():
   inputlist = sorted(readInputFile("example.txt"))
+  inputlist2 = sorted(readInputFile("example2.txt"))
   assert getVolts(inputlist) == 35
+  assert getVolts(inputlist2) == 220
   assert diffCombinations(inputlist) == 8
-
+  assert diffCombinations(inputlist2) == 19208
 
 def main():
   inputlist = sorted(readInputFile("input.txt"))
