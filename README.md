@@ -21,10 +21,3 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 | Part 1 | ⭐                | ⭐                | ⭐                |
 | Part 2 | ⭐                | ⭐                | ⭐                |
 
-
-<!--
-[11](./2020/01/) |
----------------- |
- ⭐                |
- ⭐                |
- -->
