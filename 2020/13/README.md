@@ -1,7 +1,7 @@
 # Day 13: Shuttle Search
 
 Copyright (c) Eric Wastl
-#### [Direct Link](https://adventofcode.com/2020/day/10)
+#### [Direct Link](https://adventofcode.com/2020/day/13)
 
 <!-- https://github.com/UnicycleBloke/aoc2020/tree/main/day12 -->
 
